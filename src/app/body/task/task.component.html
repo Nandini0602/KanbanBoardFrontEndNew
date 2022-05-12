@@ -1,0 +1,36 @@
+<div class="todo-section">
+  <mat-card class="example-card">
+
+    <div class="todo-list" *ngFor="let task of Tasks">
+      <h3>{{ task.task_title }}</h3>
+      <p>
+        {{ task.task_description }}
+      </p>
+      <p>
+        {{ task.status}}
+      </p>
+      <div class="mat-card-footer">
+        <h5 class="px-2">{{ task.assignee }}</h5>
+        <h5>{{ task.deadline }}</h5>
+        <a
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+        >
+          <mat-icon>more_vert</mat-icon>
+        </a>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>edit</mat-icon>
+            <span>Edit</span>
+          </button>
+          <button mat-menu-item disabled="">
+            <mat-icon>delete</mat-icon>
+            <span>Delete</span>
+          </button>
+        </mat-menu>
+      </div>
+      <span class="m-auto px-2 priority">{{ task.priority }}</span>
+    </div>
+  </mat-card>
+</div>

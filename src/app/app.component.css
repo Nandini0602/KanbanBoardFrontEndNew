@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+/* * {
+  font-family: 'Work Sans', sans-serif;
+} */
+.title{
+  font-weight: bold;
+  color:azure ;
+}
+.create-btn{
+  /* padding: 3px; */
+  margin: 5px;
+  width: 72px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background-color: lightblue;
+  color: black;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+

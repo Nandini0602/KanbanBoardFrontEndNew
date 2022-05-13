@@ -1,14 +1,15 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { TaskService } from './../task.service';
-
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Task } from './../body/task.model';
 @Component({
   selector: 'app-task-create',
   templateUrl: './task-create.component.html',
   styleUrls: ['./task-create.component.css'],
 })
 export class TaskCreateComponent implements OnInit {
-  constructor(public taskService: TaskService) {}
+  constructor(public taskService: TaskService, public route: ActivatedRoute) {}
 
   addTask(form: NgForm) {}
 
@@ -26,6 +27,7 @@ export class TaskCreateComponent implements OnInit {
       taskForm.value.status,
       taskForm.value.priority,
     );
+    taskForm.resetForm();
     // console.log(taskForm.value);
   }
 }

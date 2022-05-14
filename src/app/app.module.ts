@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { TaskComponent } from './body/task/task.component';
 import { TaskService } from 'src/app/task.service';
 import{HttpClientModule} from "@angular/common/http";
-
+import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +40,8 @@ import{HttpClientModule} from "@angular/common/http";
     MatCardModule,
     MatMenuModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DragDropModule
   ],
   providers: [TaskService],
   bootstrap: [AppComponent],
